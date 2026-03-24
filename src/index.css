@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  /* --- Neutrals & Backgrounds (Cool-toned Slate) --- */
+  --bg-app: #f8fafc;        /* Soft slate-50 */
+  --bg-card: #ffffffa3;
+  --bg-column: #f1f5f9;     /* Slate-100 */
+  --border-subtle: #e2e8f0; /* Slate-200 */
+  --border-strong: #cbd5e1; /* Slate-300 */
+  
+  /* --- Typography --- */
+  --text-primary: #0f172a;   /* Slate-900 */
+  --text-secondary: #475569; /* Slate-600 */
+  --text-muted: #64748b;     /* Slate-500 */
+  --text-on-accent: #ffffff;
+
+  /* --- Action & Brand --- */
+  --brand-primary: #6366f1;   /* Indigo-500 */
+  --brand-hover: #4f46e5;
+  --accent-soft: rgba(99, 102, 241, 0.1);
+  --focus-ring: rgba(99, 102, 241, 0.4);
+
+  /* --- Semantic States (Priority & Status) --- */
+  --critical: #ef4444;       /* Red-500 */
+  --high: #f97316;           /* Orange-500 */
+  --medium: #3b82f6;         /* Blue-500 */
+  --low: #94a3b8;            /* Slate-400 */
+  
+  --success: #10b981;        /* Emerald-500 */
+  --overdue: #fee2e2;        /* Red-100 (bg) */
+  --overdue-text: #b91c1c;   /* Red-700 (text) */
+  --due-today: #fefce8;      /* Yellow-50 (bg) */
+  --due-today-border: #eab308;
+
+  /* --- Elevation --- */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  /* --- Typography Config --- */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-app: #0b1733;        /* Slate-900 */
+    --bg-card: #1e293b;       /* Slate-800 */
+    --bg-column: #131c2e;
+    --border-subtle: #334155; /* Slate-700 */
+    --border-strong: #475569;
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    --brand-primary: #818cf8; /* Lightened for dark mode */
+    --accent-soft: rgba(129, 140, 248, 0.15);
+    
+    --overdue: rgba(239, 68, 68, 0.1);
+    --overdue-text: #fca5a5;
+    --due-today: rgba(234, 179, 8, 0.05);
+    
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* --- Base Styles --- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14px; /* Standard SaaS density */
+  line-height: 1.5;
+  color: var(--text-secondary);
+  background: var(--bg-app);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+/* --- Layout Adjustment --- */
+#root {
+  width: 100%; /* Dashboards should be fluid */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: none;
+}
+
+h1, h2, h3 {
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+h1 { font-size: 1.875rem;} /* 30px */
+h2 { font-size: 1.25rem; margin-bottom: 1rem; }    /* 20px */
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  background: var(--accent-soft);
+  color: var(--brand-primary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;     
+}
