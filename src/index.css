@@ -94,7 +94,6 @@ h1, h2, h3 {
   letter-spacing: -0.025em;
 }
 
-h1 { font-size: 1.875rem;} /* 30px */
 h2 { font-size: 1.25rem; margin-bottom: 1rem; }    /* 20px */
 
 code {
