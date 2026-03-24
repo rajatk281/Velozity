@@ -1,4 +1,3 @@
-import React from "react";
 import ToggleBar from "../UI/ToggleBar";
 
 type ViewType = "kanban" | "list" | "timeline";

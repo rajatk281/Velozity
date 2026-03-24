@@ -1,7 +1,5 @@
 import {
-  DndContext,
   useDraggable,
-  useDroppable
 } from "@dnd-kit/core";
 import AvatarGroup from "../UI/AvatarGroup";
 

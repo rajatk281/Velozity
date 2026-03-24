@@ -1,8 +1,6 @@
   import React, { useMemo, useState } from "react";
   import ListRow from "./ListRow";
   import type { Task } from "../../../types/task";
-  import { useVirtualizer } from "@tanstack/react-virtual";
-  import { useRef } from "react";
 
   interface ListViewProps {
     tasks: Task[];
@@ -40,14 +38,7 @@
       </span>
     );
 
-    const parentRef = useRef<HTMLDivElement>(null);
 
-  const rowVirtualizer = useVirtualizer({
-    count: tasks.length,
-    getScrollElement: () => parentRef.current,
-    estimateSize: () => 70, // height of each row
-    overscan: 5, // smoother scrolling
-  });
 
     return (
       <div className="w-full overflow-x-auto rounded-xl border border-slate-200 shadow-sm bg-white">
