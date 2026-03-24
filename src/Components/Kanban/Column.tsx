@@ -9,7 +9,7 @@ export const Column = ({ column, tasks }: any) => {
   return (
     <div
       ref={setNodeRef}
-      className="w-1/4 bg-gray-100 m-3 rounded-2xl p-4 flex flex-col"
+      className="md:w-1/4 bg-gray-100 rounded-2xl p-4 my-2 md:flex md:m-3"
     >
       <div className="flex justify-between mb-3 no-scrollbar">
         <h2>{column.title}</h2>

@@ -72,8 +72,8 @@ body {
   font-family: var(--font-sans);
   font-size: 14px; /* Standard SaaS density */
   line-height: 1.5;
-  color: var(--text-secondary);
-  background: var(--bg-app);
+  color: black;
+  background: black;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -89,7 +89,7 @@ body {
 }
 
 h1, h2, h3 {
-  color: var(--text-primary);
+  /* color: var(--text-primary); */
   font-weight: 600;
   letter-spacing: -0.025em;
 }
@@ -100,8 +100,8 @@ h2 { font-size: 1.25rem; margin-bottom: 1rem; }    /* 20px */
 code {
   font-family: var(--font-mono);
   font-size: 0.875rem;
-  background: var(--accent-soft);
-  color: var(--brand-primary);
+  /* background: var(--accent-soft); */
+  /* color: var(--brand-primary); */
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
 }

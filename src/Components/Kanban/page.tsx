@@ -39,7 +39,7 @@ const Kanban = ({ tasks, setTasks }: Props) => {
 
   return (
     <DndContext onDragEnd={handleDragEnd}>
-      <div className="flex h-screen no-scrollbar">
+      <div className="  h-screen no-scrollbar flex-wrap ">
 
         {groupedTasks.map(column => (
           <Column
